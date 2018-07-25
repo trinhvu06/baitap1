@@ -9,6 +9,7 @@ target 'Project1' do
 pod 'Firebase/Core'
  pod 'FBSDKLoginKit'
  pod 'Firebase/Auth'
+ pod 'Firebase/Database'
  pod 'SnapKit'
  pod 'GoogleSignIn'
 pod 'SVProgressHUD'

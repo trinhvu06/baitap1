@@ -17,11 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+        let window = UIWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        if UserManager.share.getCurrenUser() == nil {
+            // Hien thi man hinh login
+            let loginViewController = SignInViewController()
+            window.rootViewController = loginViewController
+        } else {
+            // Hien thi man hinh da login
+            let mainTabBarController = MainTabBarController()
+            window.rootViewController = mainTabBarController
+        }
+
+        self.window = window
+        window.makeKeyAndVisible()
+
         return true
     }
 

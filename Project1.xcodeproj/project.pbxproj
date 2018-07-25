@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89068C5820FCCFFE003F546F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89068C5720FCCFFE003F546F /* AppDelegate.swift */; };
-		89068C5A20FCCFFE003F546F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89068C5920FCCFFE003F546F /* ViewController.swift */; };
+		89068C5A20FCCFFE003F546F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89068C5920FCCFFE003F546F /* SignInViewController.swift */; };
 		89068C5D20FCCFFE003F546F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89068C5B20FCCFFE003F546F /* Main.storyboard */; };
 		89068C5F20FCCFFF003F546F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89068C5E20FCCFFF003F546F /* Assets.xcassets */; };
 		89068C6220FCCFFF003F546F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89068C6020FCCFFF003F546F /* LaunchScreen.storyboard */; };
@@ -17,6 +17,13 @@
 		C3BE61A1F29DB36A413C68D5 /* Pods_Project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631A609DFAD3EE468A5B08A2 /* Pods_Project1.framework */; };
 		F4687FE22108A1EF0007D013 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE12108A1EF0007D013 /* SignUpViewController.swift */; };
 		F4687FE42108A79D0007D013 /* SVProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */; };
+		F4687FE62108AAE10007D013 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE52108AAE10007D013 /* String+Extension.swift */; };
+		F4687FE82108AD250007D013 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE72108AD250007D013 /* MainTabBarController.swift */; };
+		F4687FEA2108AD530007D013 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE92108AD530007D013 /* FriendsViewController.swift */; };
+		F4687FEC2108AD5F0007D013 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FEB2108AD5F0007D013 /* UserProfileViewController.swift */; };
+		F4687FF52108AF5B0007D013 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FF42108AF5B0007D013 /* UIViewController+Extension.swift */; };
+		F4687FF72108AFF20007D013 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FF62108AFF20007D013 /* UIManager.swift */; };
+		F4687FFB2108B5A90007D013 /* FIRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FFA2108B5A90007D013 /* FIRManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +31,7 @@
 		631A609DFAD3EE468A5B08A2 /* Pods_Project1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89068C5420FCCFFE003F546F /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89068C5720FCCFFE003F546F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89068C5920FCCFFE003F546F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89068C5920FCCFFE003F546F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		89068C5C20FCCFFE003F546F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89068C5E20FCCFFF003F546F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89068C6120FCCFFF003F546F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +41,13 @@
 		AE94AB4E370F687614A554D8 /* Pods-Project1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project1/Pods-Project1.debug.xcconfig"; sourceTree = "<group>"; };
 		F4687FE12108A1EF0007D013 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Extension.swift"; sourceTree = "<group>"; };
+		F4687FE52108AAE10007D013 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F4687FE72108AD250007D013 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F4687FE92108AD530007D013 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F4687FEB2108AD5F0007D013 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		F4687FF42108AF5B0007D013 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		F4687FF62108AFF20007D013 /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		F4687FFA2108B5A90007D013 /* FIRManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				89068C5620FCCFFE003F546F /* Project1 */,
+				89068C6320FCCFFF003F546F /* Info.plist */,
 				89068C5520FCCFFE003F546F /* Products */,
 				CAFC8E6F96FB0D5CFF1F1E6E /* Pods */,
 				D08E0D58B092EEBE96D6E7A8 /* Frameworks */,
@@ -70,15 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				89068C5720FCCFFE003F546F /* AppDelegate.swift */,
-				89068C5920FCCFFE003F546F /* ViewController.swift */,
-				89068C5B20FCCFFE003F546F /* Main.storyboard */,
-				89068C5E20FCCFFF003F546F /* Assets.xcassets */,
-				89E750B320FCD2F20000A4C7 /* GoogleService-Info.plist */,
-				89E750B52104C8160000A4C7 /* UserManager.swift */,
-				89068C6020FCCFFF003F546F /* LaunchScreen.storyboard */,
-				89068C6320FCCFFF003F546F /* Info.plist */,
-				F4687FE12108A1EF0007D013 /* SignUpViewController.swift */,
-				F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */,
+				F4687FF12108ADB70007D013 /* Foundation */,
+				F4687FF02108AD9B0007D013 /* Managers */,
+				F4687FED2108AD6C0007D013 /* ViewControllers */,
+				F4687FF22108ADD10007D013 /* Storyboard */,
+				F4687FF32108ADDD0007D013 /* Resources */,
 			);
 			path = Project1;
 			sourceTree = "<group>";
@@ -98,6 +109,72 @@
 				631A609DFAD3EE468A5B08A2 /* Pods_Project1.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4687FED2108AD6C0007D013 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4687FEE2108AD820007D013 /* Authentication */,
+				F4687FEF2108AD8C0007D013 /* Authenticated */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4687FEE2108AD820007D013 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				89068C5920FCCFFE003F546F /* SignInViewController.swift */,
+				F4687FE12108A1EF0007D013 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F4687FEF2108AD8C0007D013 /* Authenticated */ = {
+			isa = PBXGroup;
+			children = (
+				F4687FE72108AD250007D013 /* MainTabBarController.swift */,
+				F4687FE92108AD530007D013 /* FriendsViewController.swift */,
+				F4687FEB2108AD5F0007D013 /* UserProfileViewController.swift */,
+			);
+			path = Authenticated;
+			sourceTree = "<group>";
+		};
+		F4687FF02108AD9B0007D013 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F4687FFA2108B5A90007D013 /* FIRManager.swift */,
+				89E750B52104C8160000A4C7 /* UserManager.swift */,
+				F4687FF62108AFF20007D013 /* UIManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F4687FF12108ADB70007D013 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */,
+				F4687FE52108AAE10007D013 /* String+Extension.swift */,
+				F4687FF42108AF5B0007D013 /* UIViewController+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F4687FF22108ADD10007D013 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				89068C5B20FCCFFE003F546F /* Main.storyboard */,
+				89068C6020FCCFFF003F546F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F4687FF32108ADDD0007D013 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89068C5E20FCCFFF003F546F /* Assets.xcassets */,
+				89E750B320FCD2F20000A4C7 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +281,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -216,6 +294,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,10 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4687FF72108AFF20007D013 /* UIManager.swift in Sources */,
+				F4687FEA2108AD530007D013 /* FriendsViewController.swift in Sources */,
 				89E750B62104C8160000A4C7 /* UserManager.swift in Sources */,
-				89068C5A20FCCFFE003F546F /* ViewController.swift in Sources */,
+				89068C5A20FCCFFE003F546F /* SignInViewController.swift in Sources */,
 				F4687FE22108A1EF0007D013 /* SignUpViewController.swift in Sources */,
+				F4687FE82108AD250007D013 /* MainTabBarController.swift in Sources */,
 				F4687FE42108A79D0007D013 /* SVProgressHUD+Extension.swift in Sources */,
+				F4687FFB2108B5A90007D013 /* FIRManager.swift in Sources */,
+				F4687FE62108AAE10007D013 /* String+Extension.swift in Sources */,
+				F4687FEC2108AD5F0007D013 /* UserProfileViewController.swift in Sources */,
+				F4687FF52108AF5B0007D013 /* UIViewController+Extension.swift in Sources */,
 				89068C5820FCCFFE003F546F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,7 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
