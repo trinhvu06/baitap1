@@ -15,6 +15,8 @@
 		89E750B420FCD2F20000A4C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E750B320FCD2F20000A4C7 /* GoogleService-Info.plist */; };
 		89E750B62104C8160000A4C7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E750B52104C8160000A4C7 /* UserManager.swift */; };
 		C3BE61A1F29DB36A413C68D5 /* Pods_Project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631A609DFAD3EE468A5B08A2 /* Pods_Project1.framework */; };
+		F4687FE22108A1EF0007D013 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE12108A1EF0007D013 /* SignUpViewController.swift */; };
+		F4687FE42108A79D0007D013 /* SVProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		89E750B320FCD2F20000A4C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89E750B52104C8160000A4C7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		AE94AB4E370F687614A554D8 /* Pods-Project1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project1/Pods-Project1.debug.xcconfig"; sourceTree = "<group>"; };
+		F4687FE12108A1EF0007D013 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				89E750B52104C8160000A4C7 /* UserManager.swift */,
 				89068C6020FCCFFF003F546F /* LaunchScreen.storyboard */,
 				89068C6320FCCFFF003F546F /* Info.plist */,
+				F4687FE12108A1EF0007D013 /* SignUpViewController.swift */,
+				F4687FE32108A79D0007D013 /* SVProgressHUD+Extension.swift */,
 			);
 			path = Project1;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -207,6 +214,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -242,6 +250,8 @@
 			files = (
 				89E750B62104C8160000A4C7 /* UserManager.swift in Sources */,
 				89068C5A20FCCFFE003F546F /* ViewController.swift in Sources */,
+				F4687FE22108A1EF0007D013 /* SignUpViewController.swift in Sources */,
+				F4687FE42108A79D0007D013 /* SVProgressHUD+Extension.swift in Sources */,
 				89068C5820FCCFFE003F546F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

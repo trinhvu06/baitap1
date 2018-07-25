@@ -11,4 +11,5 @@ pod 'Firebase/Core'
  pod 'Firebase/Auth'
  pod 'SnapKit'
  pod 'GoogleSignIn'
+pod 'SVProgressHUD'
 end

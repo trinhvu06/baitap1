@@ -26,6 +26,13 @@ class ViewController: UIViewController {
         textField.placeholder = "Nhập Mật Khẩu"
         return textField
     }()
+
+    fileprivate let signUpButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Sign-Up", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        return button
+    }()
     
     fileprivate let signInButton: UIButton = {
         let button = UIButton()
@@ -60,17 +67,21 @@ class ViewController: UIViewController {
         }
        
     }
+
     fileprivate func setupView() {
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
         self.view.addSubview(signInButton)
         self.view.addSubview(ggsignInButton)
         self.view.addSubview(fbsignInButton)
+        self.view.addSubview(signUpButton)
         
         self.signInButton.addTarget(self, action: #selector(self.didTapInSignButton(_:)), for: .touchUpInside)
         self.ggsignInButton.addTarget(self, action: #selector(self.didTapGoogleSignInBtn(_:)), for: .touchUpInside)
         self.fbsignInButton.addTarget(self, action: #selector(self.didTapFaceBookSignInBtn(_:)), for: .touchUpInside)
+        self.signUpButton.addTarget(self, action: #selector(self.didTapSignUpButton(_:)), for: .touchUpInside)
     }
+
     fileprivate func setupConstraints() {
         
         self.emailTextField.snp.makeConstraints { (make) in
@@ -97,7 +108,18 @@ class ViewController: UIViewController {
             make.bottom.equalTo(ggsignInButton.snp.top).offset(-10)
             make.centerX.equalToSuperview()
         }
+
+        self.signUpButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(fbsignInButton.snp.top).offset(-10)
+            make.centerX.equalToSuperview()
+        }
     }
+
+    @objc fileprivate func didTapSignUpButton(_ sender: Any!) {
+        let signUpViewController = SignUpViewController()
+        self.present(signUpViewController, animated: true, completion: nil)
+    }
+
     @objc fileprivate func didTapInSignButton(_ sender: Any!){
         
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
@@ -121,35 +143,49 @@ class ViewController: UIViewController {
 //            print(result?.additionalUserInfo)
 //        }
     }
+
     @objc fileprivate func didTapGoogleSignInBtn(_ sender: Any!) {
        GIDSignIn.sharedInstance().signIn()
     }
+
     @objc fileprivate func didTapFaceBookSignInBtn(_ sender: Any!) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
-            if (error == nil){
-                let fbloginresult : FBSDKLoginManagerLoginResult = result!
-                // if user cancel the login
-                if (result?.isCancelled)!{
+
+            guard error == nil,
+                let fbloginresult = result,
+                fbloginresult.isCancelled == false,
+                fbloginresult.grantedPermissions.contains("email")
+            else {
+                return
+            }
+
+            self.getFBUserData()
+            // Login with firebase here
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error {
+                    // ...
                     return
                 }
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                }
+                print(authResult?.user)
+                print(authResult?.additionalUserInfo)
+                print(authResult?.additionalUserInfo?.profile)
             }
         }
     }
     
     func getFBUserData(){
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
-                    //everything works print the user data
-                    print(result)
-                }
-            })
+        guard let _ = FBSDKAccessToken.current() else {
+            return
         }
+
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+            if (error == nil){
+                //everything works print the user data
+                print(result)
+            }
+        })
     }
     
 }

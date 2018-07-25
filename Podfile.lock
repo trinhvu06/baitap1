@@ -57,6 +57,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -64,9 +65,10 @@ DEPENDENCIES:
   - Firebase/Core
   - GoogleSignIn
   - SnapKit
+  - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -81,6 +83,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - nanopb
     - SnapKit
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -97,7 +100,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8c18d05986d7ccbdff1932eebc1ba45488d1f72d
+PODFILE CHECKSUM: fcbcba0de018c5908ce3e7142e41faedf738ebaa
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

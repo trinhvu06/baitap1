@@ -33,6 +33,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>12</string>
 	<key>FacebookAppID</key>
 	<string>519310988500839</string>
 	<key>FacebookDisplayName</key>
