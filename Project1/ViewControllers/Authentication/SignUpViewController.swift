@@ -18,6 +18,9 @@ class SignUpViewController: UIViewController {
         textField.placeholder = "email"
         textField.keyboardType = .emailAddress
         textField.font = UIFont.systemFont(ofSize: 14)
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
         return textField
     }()
 
@@ -26,6 +29,9 @@ class SignUpViewController: UIViewController {
         textField.placeholder = "Password"
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.isSecureTextEntry = true
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
         return textField
     }()
 
@@ -34,6 +40,9 @@ class SignUpViewController: UIViewController {
         textField.placeholder = "Verify password"
         textField.font = UIFont.systemFont(ofSize: 14)
         textField.isSecureTextEntry = true
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
         return textField
     }()
 
@@ -42,6 +51,9 @@ class SignUpViewController: UIViewController {
         textField.placeholder = "Name"
         textField.keyboardType = .default
         textField.font = UIFont.systemFont(ofSize: 14)
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.red.cgColor
         return textField
     }()
 
@@ -49,7 +61,8 @@ class SignUpViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Sign-Up", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .purple
+        button.backgroundColor = .red
+        
         return button
     }()
 
@@ -119,17 +132,17 @@ class SignUpViewController: UIViewController {
 
         // Khong phai la email
         if !email.isEmail {
-            SVProgressHUD.vu_showError("\(email) day khong phai la email ")
+            SVProgressHUD.vu_showError("\(email) Đây không phải là email ")
             return
         }
 
         if password != verifyPassword {
-            SVProgressHUD.vu_showError("2 mau khau khong giong nhau")
+            SVProgressHUD.vu_showError("Mật khẩu không giống nhau")
             return
         }
 
         if password.count < 6 {
-            SVProgressHUD.vu_showError("Password phai lon hon 6 ky tu")
+            SVProgressHUD.vu_showError("Mật khẩu lớn hơn 6 ký tự")
             return
         }
 
@@ -146,7 +159,7 @@ class SignUpViewController: UIViewController {
                 "id": result?.user.uid ?? ""
                 ])
 
-            SVProgressHUD.vu_showSuccess("SignUp thanh cong", completion: {
+            SVProgressHUD.vu_showSuccess("Đăng Nhập Thành Công", completion: {
                 self.dismiss(animated: true, completion: nil)
             })
         }

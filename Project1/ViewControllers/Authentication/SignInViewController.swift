@@ -15,16 +15,26 @@ import SVProgressHUD
 
 class SignInViewController: UIViewController {
     fileprivate let emailTextField: UITextField = {
+        
         let textField = UITextField()
         textField.keyboardType = .emailAddress
         textField.placeholder = "Nhập Email"
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.blue.cgColor
+
         return textField
     }()
     
     fileprivate let passwordTextField: UITextField = {
+        
         let textField = UITextField()
         textField.isSecureTextEntry = true
         textField.placeholder = "Nhập Mật Khẩu"
+        textField.layer.cornerRadius = textField.frame.size.height/2.0
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.blue.cgColor
+        
         return textField
     }()
 
@@ -32,6 +42,9 @@ class SignInViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Sign-Up", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = button.frame.size.height/2.0
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.green.cgColor
         return button
     }()
     
@@ -39,20 +52,33 @@ class SignInViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Sign-in", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = button.frame.size.height/2.0
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.gray.cgColor
         return button
     }()
     
     fileprivate let ggsignInButton: UIButton = {
+        
         let button = UIButton()
         button.setTitle("Google-SignIn", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = button.frame.size.height/2.0
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.yellow.cgColor
+        
         return button
     }()
     
     fileprivate let fbsignInButton: UIButton = {
+        
         let button = UIButton()
         button.setTitle("FaceBook-SignIn", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = button.frame.size.height/2.0
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.black.cgColor
+        
         return button
     }()
     
@@ -95,6 +121,10 @@ class SignInViewController: UIViewController {
             make.top.equalToSuperview().offset(50)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
+//            self.LoginFB.layer.cornerRadius = self.LoginFB.frame.size.height/2.0 // bo tròn
+//            self.LoginFB.layer.borderWidth = 1 //tạo viền
+//            self.LoginFB.layer.borderColor = UIColor.blue.cgColor //tạo màu viền
+            
         }
         
         self.passwordTextField.snp.makeConstraints { (make) in
@@ -137,12 +167,12 @@ class SignInViewController: UIViewController {
 
         // Khong phai la email
         if !email.isEmail {
-            SVProgressHUD.vu_showError("\(email) day khong phai la email ")
+            SVProgressHUD.vu_showError("\(email) đây không phải là email ")
             return
         }
 
         if password.count < 6 {
-            SVProgressHUD.vu_showError("Password phai lon hon 6 ky tu")
+            SVProgressHUD.vu_showError("Mật khẩu lớn hơn 6 ký tự")
             return
         }
 
@@ -166,7 +196,7 @@ class SignInViewController: UIViewController {
             "email": result?.user.email ?? "",
             "id": result?.user.uid ?? ""
             ])
-        SVProgressHUD.vu_showSuccess("SignIn thanh cong") {
+        SVProgressHUD.vu_showSuccess("SignIn Thành Công") {
             UIManager.goToAuthenticatedController()
         }
     }
